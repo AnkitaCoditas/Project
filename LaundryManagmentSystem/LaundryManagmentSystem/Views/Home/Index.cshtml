@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.Raw(TempData["LoginMessage"])
+
+
+<h2>INDEX</h2>
+
+<h3>WELCOME @Session["UserName"]</h3>
+
+<h4>@Html.ActionLink("Logout","Logout","Home")</h4>
