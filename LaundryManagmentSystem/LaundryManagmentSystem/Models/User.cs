@@ -11,8 +11,7 @@ namespace LaundryManagmentSystem.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,23 +20,15 @@ namespace LaundryManagmentSystem.Models
             this.Orders = new HashSet<Order>();
             this.Addresses = new HashSet<Address>();
         }
-
-        [Required]
-        public string FirstName { get; set; }
-        [Required]
-        public string LastName { get; set; }
-        [Required]
+    
         public int User_ID { get; set; }
-        [Required]
         public string UserName { get; set; }
-        [Required]
         public string Password { get; set; }
-        [Required]
         public int Role_ID { get; set; }
-        [Required]
         public Nullable<int> Phone_Number { get; set; }
         public string Gender { get; set; }
-        
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

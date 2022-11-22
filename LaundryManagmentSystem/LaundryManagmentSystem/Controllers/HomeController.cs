@@ -10,20 +10,35 @@ namespace LaundryManagmentSystem.Controllers
     
     public class HomeController : Controller
     {
+        LaundryManagmentSystemEntitiess db = new LaundryManagmentSystemEntitiess();
 
-        public ActionResult Index(User user)
+
+        public ActionResult Index()
         {
 
-            if (Session["UserID"] == null)
-            {
-                return RedirectToAction("Index", "Login");
-            }
-            else
-            {
-                
-                return View();  
-            }
+            return View();
         }
+
+
+        public ActionResult Create()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Laundry_Category category)
+        {
+            db.Laundry_Category.Add(category);
+            db.SaveChanges();
+            ViewBag.message = "Category Added Successfully";
+            return View();
+
+
+        }
+
+
+
 
         public ActionResult Logout()
         {

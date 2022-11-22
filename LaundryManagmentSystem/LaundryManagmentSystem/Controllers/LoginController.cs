@@ -25,21 +25,21 @@ namespace LaundryManagmentSystem.Controllers
 
             if(result!=null)
             {
-                Session["UserId"] = user.User_ID.ToString();
-                Session["UserName"]=user.UserName.ToString();
-                TempData["LoginMessage"]= "<script>alert('LOGIN SUCCESSFULL')</script>";
+                ViewBag.Message = "<script>alert('LOGIN SUCCESSFULL')</script>";
                 return RedirectToAction("Index", "Home");
 
                
             }
             else
             {
-                ViewBag.ErrorMessage = "<script>alert('UserName OR Password Is Incorrect!')</script>";
-
+                ViewBag.Message = "<script>alert('UserName OR Password Is Incorrect!')</script>";
                 return View();
-            }
 
-           
+
+            }
+            
+
+
         }
 
 
@@ -50,11 +50,15 @@ namespace LaundryManagmentSystem.Controllers
         }
 
         [HttpPost]
+        
         public ActionResult SignUp(User user)
+           
         {
-            if(ModelState.IsValid == true)
+            var usernew = user;
+            usernew.Role_ID = 1;
+            if (ModelState.IsValid == true)
             {
-                db.Users.Add(user); 
+                db.Users.Add(usernew); 
                 var result =db.SaveChanges();   
                 if(result>0)
                 {
