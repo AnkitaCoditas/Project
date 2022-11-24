@@ -39,20 +39,35 @@ namespace Laundry.Controllers
             return RedirectToAction("Get", "Inventory");
         }
 
+        //public ActionResult Edit(int id)
+        //{
+        //    var newrecord = context.Inventories.Find(id);
+        //    return View(newrecord);
+        //}
+
+        //public ActionResult Edit(int id, Inventory inventory)
+        //{
+        //    var result = context.Inventories.Find(id);
+        //    result.Inventory_Type = inventory.Inventory_Type;
+        //    context.SaveChanges();
+        //    return RedirectToAction("Get");
+        //}
+
         public ActionResult Edit(int id)
         {
             var newrecord = context.Inventories.Find(id);
             return View(newrecord);
         }
-        
+
+        [HttpPost]
         public ActionResult Edit(int id, Inventory inventory)
         {
             var result = context.Inventories.Find(id);
             result.Inventory_Type = inventory.Inventory_Type;
             context.SaveChanges();
-            return RedirectToAction("Get");
+            return RedirectToAction("Index");
         }
 
-        
+
     }
 }
