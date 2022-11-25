@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c73af05c36ce4eef8fde0eecf08ecc5e" Name="Diagram1">
+        <EntityTypeShape EntityType="LaundryManagmentSystemModel.Inventory" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaundryManagmentSystemModel.Laundry_Category" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaundryManagmentSystemModel.Order" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaundryManagmentSystemModel.Payment" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaundryManagmentSystemModel.Role" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaundryManagmentSystemModel.Service" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaundryManagmentSystemModel.sysdiagram" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaundryManagmentSystemModel.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="LaundryManagmentSystemModel.FK__Orders__Services__19AACF41" ManuallyRouted="false" />
+        <AssociationConnector Association="LaundryManagmentSystemModel.FK__Orders__User_ID__18B6AB08" ManuallyRouted="false" />
+        <AssociationConnector Association="LaundryManagmentSystemModel.FK__Payment__Order_I__1C873BEC" ManuallyRouted="false" />
+        <AssociationConnector Association="LaundryManagmentSystemModel.FK__Users__Role_ID__0D44F85C" ManuallyRouted="false" />
+        <AssociationConnector Association="LaundryManagmentSystemModel.FK__Orders__Inventor__477199F1" />
+        <AssociationConnector Association="LaundryManagmentSystemModel.FK__Orders__Laundry___467D75B8" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
