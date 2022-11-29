@@ -1,0 +1,39 @@
+﻿body {
+    background-color:floralwhite;
+}
+
+#RegistrationFormLayout{
+    background-color:aliceblue;
+    padding:40px 50px;
+    margin-top:20px;
+}
+
+    #RegistrationFormLayout #registrationForm{
+        padding-top:0;
+        padding-left:40px;
+        
+    }
+
+
+    #RegistrationFormLayout #registrationForm h3{
+       
+        margin:0;
+        margin-bottom:20px;
+        font-size:28px;
+        font-weight:bold;
+        font-family:'Times New Roman', Times, serif;
+        padding-left:15px;
+       
+    }
+
+        
+            #RegistrationFormLayout #registrationImage {
+        border-left:1px solid black;
+    }
+
+    #RegistrationFormLayout #registrationForm input[type="submit"] {
+        border-radius:50px;
+        height:40px;
+        width:120px;
+    }
+

@@ -1,0 +1,41 @@
+﻿body {
+   
+    background-repeat: no-repeat;
+    background-image: url('../folder/login (2).jpg');
+    background-size: cover;
+}
+
+
+#LoginFormLayout #loginForm {
+   
+   margin-top:120px;
+    text-align: center;
+    margin-left:450px;
+    width:300px;
+  
+   
+
+
+}
+
+
+        #LoginFormLayout #loginForm h3 {
+            margin-top:20px;
+            margin-bottom: 50px;
+            font-size: 28px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding-left: 15px;
+        }
+
+
+
+    #LoginFormlayout #loginForm input[type="submit"] {
+        margin-left: 30px;
+        font-size:12px;
+    }
+
+
+#signup {
+    margin-left: 30px;
+}

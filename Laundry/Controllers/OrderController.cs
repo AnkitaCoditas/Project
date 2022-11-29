@@ -57,9 +57,7 @@ namespace Laundry.Controllers
         public ActionResult Create(Order order)
         {
 
-            order.User_ID = Convert.ToInt32(Session["data"]);
-            order.Services_ID = Convert.ToInt32(Session["data"]);
-
+           
 
             dataaccess.Create(order);
 
@@ -67,7 +65,22 @@ namespace Laundry.Controllers
 
         }
 
+        public ActionResult Demo()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public ActionResult Demo(Order order)
+        {
+
+
+
+            dataaccess.Create(order);
+
+            return RedirectToAction("Index", "Order");
+
+        }
 
 
 

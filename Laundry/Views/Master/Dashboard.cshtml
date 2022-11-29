@@ -1,0 +1,101 @@
+﻿@model Laundry.Models.User
+
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>@ViewBag.Message</h2>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+   
+    <link href="~/CustomStyleSheet/AdminDashboardStyleSheet.css" rel="stylesheet" />
+   
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+           
+            <span class="logo_name">ADMIN</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="Dashboard" class="active">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class='bx bx-box'></i>
+                    <span class="links_name">Total Customers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-list-ul'></i>
+                    <span class="links_name">Order List</span>
+                </a>
+            </li>
+           
+           
+          
+            <li class="log_out">
+                <a href="#">
+                    <i class='bx bx-log-out'></i>
+                    <span class="links_name">Log out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+       
+
+        <div class="home-content">
+            <div class="overview-boxes">
+                <div class="box">
+                    <div class="right-side">
+                        <div class="box-topic"><a>Total Order</a></div>
+                       
+                    </div>
+                    <i class='bx bx-cart-alt cart'></i>
+                </div>
+               
+               
+                <div class="box">
+                    <div class="right-side">
+                        <div class="box-topic">Total Return</div>
+                        
+                    </div>
+                    <i class='bx bxs-cart-download cart four'></i>
+                </div>
+            </div>
+
+        
+               
+        </div>
+    </section>
+
+    <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+    </script>
+
+</body>
+</html>
+
