@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Laundry.Models.Order>
+
+@{
+    ViewBag.Title = "AdminOrders";
+}
+
+<h2>AdminOrders</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Order_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Address)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.User.Phone_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Service.Service_Type)
+        </th>
+
+
+
+
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.Laundry_Category.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Inventory.Inventory_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PickUp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order_Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Phone_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service.Service_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Laundry_Category.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Inventory.Inventory_Type)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PickUp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order_Status)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "AdminEdit", new {  id=item.Order_ID }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+
+          
+
+
+        </td>
+       
+
+    </tr>
+}
+
+</table>
