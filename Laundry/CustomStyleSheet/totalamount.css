@@ -1,0 +1,29 @@
+﻿body {
+    background-image: url('../folder/pay.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:150px;
+}
+* {
+    box-sizing: border-box;
+
+}
+
+
+
+.card {
+    color: white;
+    float: left;
+    width: calc(25% - 20px);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    height: 500px;
+   margin-left:150px;
+    text-align:center;
+    background-color:burlywood;
+}
+
+
+   
+

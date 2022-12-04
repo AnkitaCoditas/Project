@@ -1,0 +1,39 @@
+﻿
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* TAKE OBJECT FAR FROM PERSPECTIVE VIEW */
+.card {
+    /* background-color: #0000aa; */
+    perspective: 1000px;
+    margin: 1rem;
+}
+
+/* SET SAME COLUMN AND ROW FOR BOTH CARD */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+}
+
+.card-front {
+    grid-area: 1 / 1;
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    grid-area: 1 / 1;
+}
+
+/* FIX CARD IMAGES WIDTH */
+.card-container img {
+    width: 30rem;
+}
+
+.card:hover .card-container {
+    transform: rotateY(180deg);
+}

@@ -1,0 +1,31 @@
+﻿
+body {
+    background-image: url('../folder/orderimage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+#OrderFormLayout #orderForm {
+        text-align: center;
+        font-size: 18px;
+        width: 400px;
+        margin-left: 300px;
+        margin-top:100px;
+}
+
+
+
+
+
+#OrderFormlayout #orderForm input[type="submit"] {
+            margin-right:200px;
+            width:400px;
+            
+        }
