@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Laundry.Models.Order>
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "AdminOrderReceived";
+}
+
+<h2>AdminOrderReceived</h2>
+
+<button class="btn btn-primary" style="margin-top:2rem;margin-bottom:1rem;margin-left:1rem;">
+
+    @Html.ActionLink("Back To Dashboard", "Dashboard", "Master", new { area = "" }, new { @style = "font-size:14px; color:white;" })
+
+</button>
+<head>
+    <link href="~/CustomStyleSheet/AdminOrderReceived.css" rel="stylesheet" />
+</head>
+
+<table class="table">
+    <tr>
+        <th>
+            <label>User ID</label>
+        </th>
+        <th>
+            <label>Username</label>
+        </th>
+        <th>
+            <label>Services</label>
+        </th>
+        <th>
+            <label>Category</label>
+        </th>
+        <th>
+            <label>Inventory</label>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PickUp)
+        </th>
+        <th>
+            <label>Order Status</label>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Service.Service_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Laundry_Category.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inventory.Inventory_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PickUp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_Status)
+            </td>
+
+        </tr>
+    }
+
+</table>
